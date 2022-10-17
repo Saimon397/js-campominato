@@ -24,8 +24,8 @@ function play() {
             break;
     }
 
-    function titleDisappear() {
-        const titleHTML = document.getElementById('title');
+    function h2_none() {
+        const titleHTML = document.getElementById('h2-none');
         titleHTML.classList = 'd-none';
     }
 
@@ -77,7 +77,7 @@ function play() {
     }
     // chiamo la funzione
     drawGrid();
-    titleDisappear();
+    h2_none();
 }
 // attacco event listener al bottone play
 btnPlay.addEventListener('click', play);
