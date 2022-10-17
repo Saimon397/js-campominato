@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(189, 189, 189);
+    font-family: 'Source Code Pro', monospace;
+}
+
+header, footer {
+    background-color: rgb(189, 189, 189);
+    height: 80px;
+    width: 800px;
+    border-top: 3px solid rgb(123, 123, 123);
+    border-left: 3px solid rgb(123, 123, 123);
+    border-right: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.btn{
+    margin-right: 200px;
+    background-color: rgb(189, 189, 189);
+    border-top: 3px solid rgb(255, 255, 255);
+    border-left: 3px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(123, 123, 123);
+    border-bottom: 3px solid rgb(123, 123, 123);
+}
+
+.btn:hover{
+    background-color: rgb(189, 189, 189);
+    border-top: 4px solid rgb(123, 123, 123);
+    border-left: 4px solid rgb(123, 123, 123);
+    border-right: 2px solid rgb(123, 123, 123);
+    border-bottom: 2px solid rgb(123, 123, 123);
+}
+
+.emoji{
+    width: 40px;
+}
+
+main {
+    height: calc(100vh - 160px);
+    overflow-y: auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(189, 189, 189);
+    border-top: 3px solid rgb(123, 123, 123);
+    border-left: 3px solid rgb(123, 123, 123);
+    border-right: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-top: 3px solid rgb(255, 255, 255);
+    border-left: 3px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(123, 123, 123);
+    border-bottom: 3px solid rgb(123, 123, 123);
+}
+
+.bg-game {
+    background-color: rgb(136, 136, 136);
+}
