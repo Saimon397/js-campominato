@@ -1,6 +1,8 @@
 const btnPlay = document.getElementById('play');
 
 function play() {
+    let block = document.getElementById('block');
+    block.classList.remove('stop');
     console.log('Start Game...');
     const NUM_BOMB = 16;
     const bombsPosition = [];
@@ -22,6 +24,10 @@ function play() {
             break;
     }
 
+    function titleDisappear() {
+        const titleHTML = document.getElementById('title');
+        titleHTML.classList = 'd-none';
+    }
 
     // funzione che genera la cella
     function drawCell(num) {
@@ -39,9 +45,9 @@ function play() {
             cell.addEventListener('click', function () {
                 const arrBomb = document.querySelectorAll('.bomb');
                 for (let i = 0; i < arrBomb.length; i++) {
-
                     arrBomb[i].classList.add('mine');
                 }
+                block.classList.add('stop');
             });
         } else {
             cell.addEventListener('click', function () {
@@ -71,6 +77,7 @@ function play() {
     }
     // chiamo la funzione
     drawGrid();
+    titleDisappear();
 }
 // attacco event listener al bottone play
 btnPlay.addEventListener('click', play);

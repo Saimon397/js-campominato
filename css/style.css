@@ -60,6 +60,7 @@ main {
     align-content: flex-start;
     width: 500px;
     height: 500px;
+    margin-top: 50px;
     background-color: rgb(189, 189, 189);
     border-top: 5px solid rgb(123, 123, 123);
     border-left: 5px solid rgb(123, 123, 123);
@@ -90,11 +91,19 @@ main {
     height: 10pt;
 }
 
+.stop {
+    pointer-events: none;
+}
+
 /***MEDIA-QUERY***/
 
 @media screen and (max-width: 1200px) {
     body {
         margin: 130px 130px 130px 130px;
+    }
+
+    .grid {
+        margin-top: 80px;
     }
 }
 
@@ -131,5 +140,9 @@ main {
 
     .btn {
         margin-right: 60px;
+    }
+
+    .grid {
+        width: 400px;
     }
 }
