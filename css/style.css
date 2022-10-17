@@ -82,6 +82,14 @@ main {
     background-color: rgb(136, 136, 136);
 }
 
+.mine {
+    background-image: url('../img/328271.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10pt;
+    height: 10pt;
+}
+
 /***MEDIA-QUERY***/
 
 @media screen and (max-width: 1200px) {
@@ -106,7 +114,7 @@ main {
         width: 500px;
     }
 
-    .btn{
+    .btn {
         margin-right: 100px;
     }
 }
@@ -121,7 +129,7 @@ main {
         width: 400px;
     }
 
-    .btn{
+    .btn {
         margin-right: 60px;
     }
 }

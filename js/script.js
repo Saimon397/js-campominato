@@ -9,7 +9,7 @@ function play() {
     fieldGame.innerHTML = '';
     const levelHTML = document.getElementById('difficulty');
     const level = levelHTML.value;
-    switch(level) {
+    switch (level) {
         case '1':
         default:
             numCell = 100;
@@ -31,17 +31,29 @@ function play() {
         cell.style.width = `calc(100% / ${cellPerSide})`;
         cell.style.height = `calc(100% / ${cellPerSide})`;
         cell.innerHTML = `
-            <span>${num}</span>
+            <span></span>
         `;
-        cell.addEventListener('click', function() {
-            this.classList.add('bg-game');
-        });
+
+        if (bombsPosition.includes(num)) {
+            cell.classList.add('bomb');
+            cell.addEventListener('click', function () {
+                const arrBomb = document.querySelectorAll('.bomb');
+                for (let i = 0; i < arrBomb.length; i++) {
+
+                    arrBomb[i].classList.add('mine');
+                }
+            });
+        } else {
+            cell.addEventListener('click', function () {
+                this.classList.add('bg-game');
+            });
+        }
         return cell;
     }
-    
-    while(bombsPosition.length < NUM_BOMB) {
+
+    while (bombsPosition.length < NUM_BOMB) {
         const bomb = randomNumber(1, numCell);
-        if(!bombsPosition.includes(bomb)) {
+        if (!bombsPosition.includes(bomb)) {
             bombsPosition.push(bomb);
         }
     }
@@ -51,7 +63,7 @@ function play() {
     function drawGrid() {
         const grid = document.createElement('div');
         grid.className = 'grid';
-        for(let i = 1; i <= numCell; i++) {
+        for (let i = 1; i <= numCell; i++) {
             const cell = drawCell(i);
             grid.appendChild(cell);
         }
