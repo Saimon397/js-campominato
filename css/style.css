@@ -1,14 +1,19 @@
 * {
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    margin: 330px 330px 330px 330px;
     padding: 10px;
     display: flex;
     justify-content: center;
     background-color: rgb(189, 189, 189);
+    border-top: 10px solid rgb(255, 255, 255);
+    border-left: 10px solid rgb(255, 255, 255);
+    border-right: 10px solid rgb(123, 123, 123);
+    border-bottom: 10px solid rgb(123, 123, 123);
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -16,10 +21,10 @@ header, footer {
     background-color: rgb(189, 189, 189);
     height: 80px;
     width: 800px;
-    border-top: 3px solid rgb(123, 123, 123);
-    border-left: 3px solid rgb(123, 123, 123);
-    border-right: 3px solid rgb(255, 255, 255);
-    border-bottom: 3px solid rgb(255, 255, 255);
+    border-top: 5px solid rgb(123, 123, 123);
+    border-left: 5px solid rgb(123, 123, 123);
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
 }
 
 .btn{
@@ -55,10 +60,10 @@ main {
     width: 500px;
     height: 500px;
     background-color: rgb(189, 189, 189);
-    border-top: 3px solid rgb(123, 123, 123);
-    border-left: 3px solid rgb(123, 123, 123);
-    border-right: 3px solid rgb(255, 255, 255);
-    border-bottom: 3px solid rgb(255, 255, 255);
+    border-top: 5px solid rgb(123, 123, 123);
+    border-left: 5px solid rgb(123, 123, 123);
+    border-right: 5px solid rgb(255, 255, 255);
+    border-bottom: 5px solid rgb(255, 255, 255);
 }
 
 .square {
@@ -66,10 +71,10 @@ main {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    border-top: 3px solid rgb(255, 255, 255);
-    border-left: 3px solid rgb(255, 255, 255);
-    border-right: 3px solid rgb(123, 123, 123);
-    border-bottom: 3px solid rgb(123, 123, 123);
+    border-top: 4px solid rgb(255, 255, 255);
+    border-left: 4px solid rgb(255, 255, 255);
+    border-right: 4px solid rgb(123, 123, 123);
+    border-bottom: 4px solid rgb(123, 123, 123);
 }
 
 .bg-game {
