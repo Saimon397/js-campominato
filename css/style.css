@@ -17,7 +17,8 @@ body {
     font-family: 'Source Code Pro', monospace;
 }
 
-header, footer {
+header,
+footer {
     background-color: rgb(189, 189, 189);
     height: 80px;
     width: 800px;
@@ -27,7 +28,7 @@ header, footer {
     border-bottom: 5px solid rgb(255, 255, 255);
 }
 
-.btn{
+.btn {
     margin-right: 200px;
     background-color: rgb(189, 189, 189);
     border-top: 3px solid rgb(255, 255, 255);
@@ -36,7 +37,7 @@ header, footer {
     border-bottom: 3px solid rgb(123, 123, 123);
 }
 
-.btn:hover{
+.btn:hover {
     background-color: rgb(189, 189, 189);
     border-top: 4px solid rgb(123, 123, 123);
     border-left: 4px solid rgb(123, 123, 123);
@@ -44,7 +45,7 @@ header, footer {
     border-bottom: 2px solid rgb(123, 123, 123);
 }
 
-.emoji{
+.emoji {
     width: 40px;
 }
 
@@ -79,4 +80,48 @@ main {
 
 .bg-game {
     background-color: rgb(136, 136, 136);
+}
+
+/***MEDIA-QUERY***/
+
+@media screen and (max-width: 1200px) {
+    body {
+        margin: 130px 130px 130px 130px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        margin: 60px 60px 60px 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 30px 30px 30px 30px;
+    }
+
+    header,
+    footer {
+        width: 500px;
+    }
+
+    .btn{
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        margin: 10px 10px 10px 10px;
+    }
+
+    header,
+    footer {
+        width: 400px;
+    }
+
+    .btn{
+        margin-right: 60px;
+    }
 }
