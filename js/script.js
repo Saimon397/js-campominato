@@ -1,5 +1,4 @@
 const btnPlay = document.getElementById('play');
-const containertxt = document.getElementById('container-txt');
 
 function play() {
     console.log('Start Game...');
@@ -48,7 +47,6 @@ function play() {
                     arrBomb[i].classList.add('mine');
                 }
                 block.classList.add('stop');
-                containertxt.className = 'text';
                 document.getElementById('game-wl').innerHTML = 'Game Over &#129324; score:' + counter;
             });
         } else {
@@ -57,7 +55,7 @@ function play() {
                 counter++;
                 console.log(counter);
                 if (counter == (numCell - NUM_BOMB)) {
-                    document.getElementById('game-wl').innerHTML = "YOU WIN &#129297;";
+                    document.getElementById('game-wl').innerHTML = "YOU WIN !!! &#129297;";
                 }
             });
         }

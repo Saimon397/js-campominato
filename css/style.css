@@ -29,8 +29,8 @@ footer {
 }
 
 h1 {
-    margin-left: -50px;
-    font-size: 35px;
+    margin-left: -40px;
+    font-size: 25px;
 }
 
 .btn {
@@ -151,6 +151,7 @@ main {
 
     h1 {
         margin-left: 0;
+        font-size: 20px;
     }
 }
 
