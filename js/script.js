@@ -1,9 +1,11 @@
 const btnPlay = document.getElementById('play');
 
+const containertxt = document.getElementById('container-txt');
+
 function play() {
+    console.log('Start Game...');
     let block = document.getElementById('block');
     block.classList.remove('stop');
-    console.log('Start Game...');
     const NUM_BOMB = 16;
     const bombsPosition = [];
     let numCell;
@@ -48,6 +50,8 @@ function play() {
                     arrBomb[i].classList.add('mine');
                 }
                 block.classList.add('stop');
+                containertxt.className = 'text';
+                document.getElementById('game-over').innerHTML = 'Game Over &#129324;';
             });
         } else {
             cell.addEventListener('click', function () {
