@@ -1,9 +1,9 @@
 const btnPlay = document.getElementById('play');
-
 const containertxt = document.getElementById('container-txt');
 
 function play() {
     console.log('Start Game...');
+    let counter = 0;
     let block = document.getElementById('block');
     block.classList.remove('stop');
     const NUM_BOMB = 16;
@@ -38,9 +38,7 @@ function play() {
         cell.className = 'square';
         cell.style.width = `calc(100% / ${cellPerSide})`;
         cell.style.height = `calc(100% / ${cellPerSide})`;
-        cell.innerHTML = `
-            <span></span>
-        `;
+        cell.innerHTML = `<span></span>`;
 
         if (bombsPosition.includes(num)) {
             cell.classList.add('bomb');
@@ -51,11 +49,16 @@ function play() {
                 }
                 block.classList.add('stop');
                 containertxt.className = 'text';
-                document.getElementById('game-over').innerHTML = 'Game Over &#129324;';
+                document.getElementById('game-wl').innerHTML = 'Game Over &#129324; score:' + counter;
             });
         } else {
             cell.addEventListener('click', function () {
                 this.classList.add('bg-game');
+                counter++;
+                console.log(counter);
+                if (counter == (numCell - NUM_BOMB)) {
+                    document.getElementById('game-wl').innerHTML = "YOU WIN &#129297;";
+                }
             });
         }
         return cell;
